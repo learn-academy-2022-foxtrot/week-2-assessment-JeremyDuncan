@@ -15,15 +15,39 @@ const cohort = "Foxtrot 2022";
 
 // a) Your answer:
 // Expected Output:
+// ["F", "o", "x", "t", "r", "o", "t", " ", "2", "0", "2", "2"];
+
 // Explanation:
+// This should show an array of strings.
+// Since "" is being used as the argument for the split() method, this should
+// split all the characters in the string apart and place each individual
+// string character in an array with it's own index.
 
 // b) Verify and explain:
-// according to:
+// explanation === true
+//
+// according to: MDN Webdocs, the split() method searches for a pattern that is
+// provided as an argument and returns substrings based on those patterns in
+// ordered list inside an array.
 
 //------------------------------------------------------------------------------
-// example:
+// examples:
 //
+// const cohort2 = "Foxtrot 2022";
+// console.log(cohort2.split(" "))
+// Output: ["Foxtrot", "2021"]
 //
+// const cohort3 = "Foxtrot 2022";
+// console.log(cohort3.split())
+// Output: ["Foxtrot 2021"]
+//
+// const cohort4 = "F*o*x*t*r*o*t*2*0*2*2";
+// console.log(cohort4.split("*"))
+// Output: ["F", "o", "x", "t", "r", "o", "t","2", "0", "2", "2"]
+
+// const cohort5 = "Foxtrot--BLAHBLAHBLAHBLAH--2022";
+// console.log(cohort5.split("--BLAHBLAHBLAHBLAH--"));
+// Output: ["Foxtrot", "2021"]
 //------------------------------------------------------------------------------
 
 //==============================================================================
