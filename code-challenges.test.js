@@ -58,7 +58,7 @@ describe("divByThree", () => {
   });
 });
 
-// ------------------------ Test Objects ---------------------------------------
+// ----------------------== Test Objects ==-------------------------------------
 const object1 = { number: 15 };
 // Expected output: "15 is divisible by three"
 const object2 = { number: 0 };
@@ -66,7 +66,7 @@ const object2 = { number: 0 };
 const object3 = { number: -7 };
 // Expected output: "-7 is not divisible by three"
 
-// ----------------- Additional Edge Cases -------------------------------------
+// -----------------== Additional Edge Cases ==---------------------------------
 const object4 = { number: -9 };
 // Expected output: "-9 is divisible by three"
 const object5 = { number: 10 };
@@ -76,7 +76,7 @@ const object5 = { number: 10 };
 // b) Create the function that makes the test pass.
 // =============================================================================
 
-//----------------------- Explanantion -----------------------------------------
+//---------------------== Function Explanantion ==------------------------------
 // -----Inputs: Object
 // -----Output: String
 //
@@ -101,6 +101,30 @@ const divByThree = (obj) => {
 // a) Create a test with expect statements for each of the variables provided.
 // =============================================================================
 
+//-------------------------== Test Explanantion ==------------------------------
+// I decided to stick with one it-statement on this test since both test cases
+// would encompase the same description of the test.
+//
+// ------ Initial Test: ReferenceError: capitalize is not defined --------------
+//------------------------------------------------------------------------------
+describe("capitalize", () => {
+  it("returns an array with all the words capitalized", () => {
+    expect(capitalize(randomNouns1)).toEqual([
+      "Streetlamp",
+      "Potato",
+      "Teeth",
+      "Conclusion",
+      "Nephew",
+    ]);
+    expect(capitalize(randomNouns2)).toEqual([
+      "Temperature",
+      "Database",
+      "Chopsticks",
+      "Mango",
+    ]);
+  });
+});
+
 const randomNouns1 = ["streetlamp", "potato", "teeth", "conclusion", "nephew"];
 // Expected output: ["Streetlamp", "Potato", "Teeth", "Conclusion", "Nephew"]
 const randomNouns2 = ["temperature", "database", "chopsticks", "mango"];
@@ -109,6 +133,30 @@ const randomNouns2 = ["temperature", "database", "chopsticks", "mango"];
 // =============================================================================
 // b) Create the function that makes the test pass.
 // =============================================================================
+
+//----------------------- Explanantion -----------------------------------------
+// Input: Array of Strings
+// Output: Array of Strings
+//
+// I decided to use the higher order function Map() to accomplish this task
+// since it will allow me to apply the necessary changes to all values in the
+// array and return a new array with my results.
+//
+// I used map() => to go through each word in words array and..
+// ensure each word is lowercase then stored to be used later..
+// then we want to apply the toUpperCase() to just the first letter in each word
+// I use the charAt() method to return the char at index 0 to accomplish this
+// then return the combined capital letter and lowercase letters using
+// slice(1) and concatenation
+//
+// **Note** since using map() this will not mutate the original array.
+//------------------------------------------------------------------------------
+const capitalize = (words) => {
+  return words.map((word) => {
+    const lowercase = word.toLowerCase();
+    return word.charAt(0).toUpperCase() + lowercase.slice(1);
+  });
+};
 
 // =============================================================================
 // --------------------3) Create a function that takes in a string and logs the
