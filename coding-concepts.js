@@ -116,17 +116,30 @@ const onlyOdds = [11, 12, 13, 14, 15].filter((number) => number % 2 !== 0);
 // console.log(onlyOdds)
 
 // a) Your answer:
-// Expected Output:
+// Expected Output: [11, 13, 15]
+
 // Explanation:
-
+// The higher order function filter() should return a new array containing the
+// elements of the array that are not even since it is returning only numbers in
+// the original array that equal true based on the conditional statement passed
+// inside the filter() method.
+//
+// ** in this case:
+// 11 % 2 is not equal to 0, which would return true, so it is passed through to
+// onlyOdds, and so forth with 13, and 15 inside a new array.
+//
 // b) Verify and explain:
-// according to:
-
-//------------------------------------------------------------------------------
-// example:
+// according to: MDN Webdocs, filter() creates a shallow copy af an array based
+// elements that pass whatever test may be implemenmted by a function inside the
+// filter() method.
 //
-//
-//------------------------------------------------------------------------------
+// *** Rabbit Hole ***
+// This research led me down a rabbit hole as I was curious about what a
+// shallow copy meant. According to MDN Webdocs, a shallow copy is a copy whose
+// properties share the same references (which sound like the same location in
+// memory). it goes on to state if you change the challow copy, then it will
+// also affect the original.
+// Reference: https://developer.mozilla.org/en-US/docs/Glossary/Shallow_copy
 
 //==============================================================================
 // --------------------5) What will this log?
