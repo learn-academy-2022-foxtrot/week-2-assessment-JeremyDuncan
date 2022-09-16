@@ -60,17 +60,20 @@ const greeter = (name) => {
 // console.log(greeter("LEARN Student"))
 
 // a) Your answer:
-// Expected Output:
+// Expected Output: undefined
+
 // Explanation:
+// This whould log as undefined since the function greeter() does not contain
+// a return statement. When the console.log method invokes the greeter function,
+// the function executes, but does not have an output. This is generally not an
+// issue with other languages such as Ruby or Python which will return a value
+// based on the last line of code executed in a function / method.
 
 // b) Verify and explain:
-// according to:
-
-//------------------------------------------------------------------------------
-// example:
-//
-//
-//------------------------------------------------------------------------------
+// according to: MDN Webdocs, the return is required to end the execution of a
+// function and return a value.
+// according to: https://eloquentjavascript.net/03_functions.html, the function
+// ends as soon as it reaches a return.
 
 //==============================================================================
 // --------------------3) What will this log?
