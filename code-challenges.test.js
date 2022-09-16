@@ -134,7 +134,7 @@ const randomNouns2 = ["temperature", "database", "chopsticks", "mango"];
 // b) Create the function that makes the test pass.
 // =============================================================================
 
-//----------------------- Explanantion -----------------------------------------
+//---------------------== Explanantion ==---------------------------------------
 // Input: Array of Strings
 // Output: Array of Strings
 //
@@ -165,6 +165,25 @@ const capitalize = (words) => {
 // a) Create a test with expect statements for each of the variables provided.
 // =============================================================================
 
+//-------------------------== Test Explanantion ==------------------------------
+// I decided to use two it-statements to be more descriptive on this test since
+// I wanted to test for an edge case for when a word may not have a vowel.
+//
+// ---- Initial Test: ReferenceError: getFirstVowel is not defined -------------
+//------------------------------------------------------------------------------
+
+describe("getFirstVowel", () => {
+  it("returns the index of the first vowel", () => {
+    expect(getFirstVowel(vowelTester1)).toEqual(1);
+    expect(getFirstVowel(vowelTester2)).toEqual(0);
+    expect(getFirstVowel(vowelTester3)).toEqual(2);
+    expect(getFirstVowel(vowelTester4)).toEqual(null);
+  });
+  it("returns null if the word does not contain a vowel", () => {
+    expect(getFirstVowel(vowelTester4)).toEqual(null);
+  });
+});
+
 const vowelTester1 = "learn";
 // Expected output: 1
 const vowelTester2 = "academy";
@@ -172,8 +191,41 @@ const vowelTester2 = "academy";
 const vowelTester3 = "challenges";
 // Expected output: 2
 
+// -----------------== Additional Edge Cases ==---------------------------------
+const vowelTester4 = "myth";
+// Expected output: null
+
 // =============================================================================
 // b) Create the function that makes the test pass.
 // =============================================================================
+
+//---------------------== Explanantion ==---------------------------------------
+// Input: String
+// Output: Integer or Null
+//
+// I decided to use a for-loop and a conditional if-statement to accomplish
+// this task. I then decided to go a little further and have the function return
+// null if it finishes iterating through a word that doesn't have a vowel.
+//
+// iterate over each string character
+// if a character is a vowel then..
+// return the index
+// if for-loop completes iterations..
+// return null
+//------------------------------------------------------------------------------
+const getFirstVowel = (string) => {
+  for (i = 0; i < string.length; i++) {
+    if (
+      string[i] === "a" ||
+      string[i] === "e" ||
+      string[i] === "i" ||
+      string[i] === "o" ||
+      string[i] === "u"
+    ) {
+      return i;
+    }
+  }
+  return null;
+};
 
 // =============================================================================
