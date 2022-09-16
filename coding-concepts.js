@@ -3,66 +3,137 @@
 // Examine the following examples.
 
 // First, predict the outcome based on your understanding of the code.
-// Then, uncomment the console.log() and verify the output. Briefly explain why your initial answer was correct or incorrect.
+// Then, uncomment the console.log() and verify the output. Briefly explain
+// why your initial answer was correct or incorrect.
 
+//==============================================================================
 // --------------------1) What will this log?
+//==============================================================================
 
-const cohort = "Foxtrot 2022"
+const cohort = "Foxtrot 2022";
 // console.log(cohort.split(""))
 
 // a) Your answer:
-// b) Verify and explain:
+// Expected Output:
+// Explanation:
 
+// b) Verify and explain:
+// according to:
+
+//------------------------------------------------------------------------------
+// example:
+//
+//
+//------------------------------------------------------------------------------
+
+//==============================================================================
 // --------------------2) What will this log?
+//==============================================================================
 
 const greeter = (name) => {
-  `Hello, ${name}!`
-}
+  `Hello, ${name}!`;
+};
 // console.log(greeter("LEARN Student"))
 
 // a) Your answer:
+// Expected Output:
+// Explanation:
+
 // b) Verify and explain:
+// according to:
 
+//------------------------------------------------------------------------------
+// example:
+//
+//
+//------------------------------------------------------------------------------
+
+//==============================================================================
 // --------------------3) What will this log?
+//==============================================================================
 
-const multipliedByTwo = [4, 5, 6, 7, 8].map((number) => number * 2)
+const multipliedByTwo = [4, 5, 6, 7, 8].map((number) => number * 2);
 // console.log(multipliedByTwo)
 
 // a) Your answer:
+// Expected Output:
+// Explanation:
+
 // b) Verify and explain:
+// according to:
 
+//------------------------------------------------------------------------------
+// example:
+//
+//
+//------------------------------------------------------------------------------
+
+//==============================================================================
 // --------------------4) What will this log?
+//==============================================================================
 
-const onlyOdds = [11, 12, 13, 14, 15].filter((number) => number % 2 !== 0)
+const onlyOdds = [11, 12, 13, 14, 15].filter((number) => number % 2 !== 0);
 // console.log(onlyOdds)
 
 // a) Your answer:
-// b) Verify and explain:
+// Expected Output:
+// Explanation:
 
+// b) Verify and explain:
+// according to:
+
+//------------------------------------------------------------------------------
+// example:
+//
+//
+//------------------------------------------------------------------------------
+
+//==============================================================================
 // --------------------5) What will this log?
+//==============================================================================
 
 const myCodingSkills = {
   languages: ["JavaScript", "Ruby"],
   frameworks: ["React", "Ruby on Rails"],
   databases: "PostgreSQL",
-  versionControl: "GitHub"
-}
+  versionControl: "GitHub",
+};
 // console.log(myCodingSkills.languages[0])
 
 // a) Your answer:
-// b) Verify and explain:
+// Expected Output:
+// Explanation:
 
+// b) Verify and explain:
+// according to:
+
+//------------------------------------------------------------------------------
+// example:
+//
+//
+//------------------------------------------------------------------------------
+
+//==============================================================================
 // --------------------STRETCH: What will this log?
+//==============================================================================
 
 class Learn {
   constructor(name) {
-    this.student = name,
-    this.cohort = "Foxtrot",
-    this.year = 2022
+    (this.student = name), (this.cohort = "Foxtrot"), (this.year = 2022);
   }
 }
-const learnStudent = new Learn("George")
+const learnStudent = new Learn("George");
 // console.log(learnStudent)
 
 // a) Your answer:
+// Expected Output:
+// Explanation:
+
 // b) Verify and explain:
+// according to:
+
+//------------------------------------------------------------------------------
+// example:
+//
+//
+//------------------------------------------------------------------------------
