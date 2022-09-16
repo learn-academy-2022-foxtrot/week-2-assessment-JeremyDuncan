@@ -47,7 +47,7 @@ const cohort = "Foxtrot 2022";
 
 // const cohort5 = "Foxtrot--BLAHBLAHBLAHBLAH--2022";
 // console.log(cohort5.split("--BLAHBLAHBLAHBLAH--"));
-// Output: ["Foxtrot", "2021"]
+// Output: ["Foxtrot", "2022"]
 //------------------------------------------------------------------------------
 
 //==============================================================================
@@ -80,15 +80,28 @@ const multipliedByTwo = [4, 5, 6, 7, 8].map((number) => number * 2);
 // console.log(multipliedByTwo)
 
 // a) Your answer:
-// Expected Output:
+// Expected Output: [8, 10, 12, 14, 16]
+//
 // Explanation:
+// Since the higher order function map() is being used on this array it
+// will affect all elements in the array and multiple each individual element
+// by 2. it then should assign the value of the new array to the variable
+// multipliedByTwo.
 
 // b) Verify and explain:
-// according to:
+// according to: MDN Webdocs, map() returns a new array based on the results of
+// provided function being applied to every element of the array.
 
 //------------------------------------------------------------------------------
-// example:
+// examples:
 //
+// const multipliedBy5 = [4, 5, 6, 7, 8].map((number) => number * 5);
+// console.log(multipliedBy5)
+// Expected Output: [20, 25, 35, 40, 45]
+//
+// const zeroOut = [4, 5, 6, 7, 8].map((number) => number * 0);
+// console.log(zeroOut)
+// Expected Output: [0, 0, 0, 0, 0]
 //
 //------------------------------------------------------------------------------
 
