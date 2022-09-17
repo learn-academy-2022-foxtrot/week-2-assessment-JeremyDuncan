@@ -32,7 +32,7 @@ const numbersArray2 = [24, 27, 30, 33, 36];
 // a) Create a test with expect statements for each of the variables provided.
 // =============================================================================
 
-//-------------------------== Test Explanantion ==------------------------------
+//-------------------------== Test Explanation ==-------------------------------
 // I decided to be more descriptive with this test by using multiple
 // it-statments to show different edge case tests in the terminal when Jest
 // performs tests.
@@ -76,7 +76,7 @@ const object5 = { number: 10 };
 // b) Create the function that makes the test pass.
 // =============================================================================
 
-//---------------------== Function Explanantion ==------------------------------
+//---------------------== Function Explanation ==-------------------------------
 // -----Inputs: Object
 // -----Output: String
 //
@@ -101,7 +101,7 @@ const divByThree = (obj) => {
 // a) Create a test with expect statements for each of the variables provided.
 // =============================================================================
 
-//-------------------------== Test Explanantion ==------------------------------
+//---------------------== Function Explanation ==-------------------------------
 // I decided to stick with one it-statement on this test since both test cases
 // would encompase the same description of the test.
 //
@@ -134,7 +134,7 @@ const randomNouns2 = ["temperature", "database", "chopsticks", "mango"];
 // b) Create the function that makes the test pass.
 // =============================================================================
 
-//---------------------== Explanantion ==---------------------------------------
+//---------------------== Function Explanation ==-------------------------------
 // Input: Array of Strings
 // Output: Array of Strings
 //
@@ -165,7 +165,7 @@ const capitalize = (words) => {
 // a) Create a test with expect statements for each of the variables provided.
 // =============================================================================
 
-//-------------------------== Test Explanantion ==------------------------------
+//---------------------== Function Explanation ==-------------------------------
 // I decided to use two it-statements to be more descriptive on this test since
 // I wanted to test for an edge case for when a word may not have a vowel.
 //
@@ -199,7 +199,7 @@ const vowelTester4 = "myth";
 // b) Create the function that makes the test pass.
 // =============================================================================
 
-//---------------------== Explanantion ==---------------------------------------
+//---------------------== Function Explanation ==-------------------------------
 // Input: String
 // Output: Integer or Null
 //
