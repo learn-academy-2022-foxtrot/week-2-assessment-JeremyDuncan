@@ -191,17 +191,45 @@ class Learn {
   }
 }
 const learnStudent = new Learn("George");
-// console.log(learnStudent)
+//console.log(learnStudent);
 
 // a) Your answer:
-// Expected Output:
+// Expected Output: Learn { student: "George", cohort: "Foxtrot", year: 2022 }
+//
 // Explanation:
+// This should return the whole object learnStudent since the console.log is
+// invoking the entire object.
+//
+// If we dig deeper and look at the Class Learn, then you will notice there is
+// only one parameter for an input (name) while the other key value pairs are
+// using default values assigned to it's other keys internally.
+//
+// ----------------------other variation and examples --------------------------
+// Another approach that could have been taken would have been to add the other
+// parameters and their default values to pass through the Class's constructor:
+//
+//  constructor(name = "Billy" , cohort = "foxtrot", year = 2022) {
+//  this.student = name,
+//  this.cohort = cohort,
+//  this.year = year
+//  }
+//
+// this would give the ability create an object with default values, OR create
+// and object with your own declared values by passing on arguments.
+//
+// const learnStudentWithArguments = new Learn("Sally", "FoxWho?", 1999);
+// Object RESULT => Learn { student: "Sally", cohort: "FoxWho?", year: 1999 }
+//
+// const learnStudentDefault = new Learn();
+// Object RESULT => Learn { student: "Billy", cohort: "Foxtrot", year: 2022 }
 
 // b) Verify and explain:
-// according to:
+// according to: MDN Webdocs, classes are "special functions" I found that
+// fairly interesting. Another interesting tid-bit I learned was that how
+// hoisting works between functions and classes:
 
-//------------------------------------------------------------------------------
-// example:
-//
-//
-//------------------------------------------------------------------------------
+// You have to declare a class in your program before you can create an object,
+// whereas you can take advantage of hoisting with functions, but only functions
+// declared with the function declaration (not arrow functions). This means you
+// can invoke a function anywhere in your code as long as you declared it
+// somehere.
