@@ -154,17 +154,32 @@ const myCodingSkills = {
 // console.log(myCodingSkills.languages[0])
 
 // a) Your answer:
-// Expected Output:
+// Expected Output: "JavaScript"
+//
 // Explanation:
-
+// This should display "JavaScript" on the console since console.log is invoking
+// the object: myCodingSkills with a combination of Dot Notation and Bracket
+// Notaton to access the string element.
+//
+// 1. Object myCodingSkills is called
+// 2. "languages" key is selected using Dot Notation which accesses the Value
+//     that is paired with it.
+// 3. Value to the languages key is an Array of strings
+// 4. The strings inside the array are accessed with Bracket Notation.
+//
+// Breakdown of myCodingSkills:
+//  OBJECT(myCodingSkills)
+// => KEY(languages)==> VALUE(["JavaScript", "Ruby"])=====> [0]("JavaScript")
+// => KEY(languages)==> VALUE(["JavaScript", "Ruby"])=====> [1]("Ruby")
+// => KEY(frameworks)=> VALUE(["React", "Ruby on Rails"])=> [0]("React")
+// => KEY(frameworks)=> VALUE(["React", "Ruby on Rails"])=> [1]("Ruby on Rails")
+// => KEY(databases)==> VALUE("PostgreSQL")
+// => KEY(databases)==> VALUE("GitHub")
+//
 // b) Verify and explain:
-// according to:
-
-//------------------------------------------------------------------------------
-// example:
-//
-//
-//------------------------------------------------------------------------------
+// according to: https://dmitripavlutin.com/access-object-properties-javascript/
+// there are three ways access data in an object. Thats through:
+// Dot Notation, Bracket Notation, and Desctructuring.
 
 //==============================================================================
 // --------------------STRETCH: What will this log?
