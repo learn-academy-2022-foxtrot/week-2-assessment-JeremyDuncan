@@ -35,15 +35,15 @@ const cohort = "Foxtrot 2022";
 //
 // const cohort2 = "Foxtrot 2022";
 // console.log(cohort2.split(" "))
-// Output: ["Foxtrot", "2021"]
+// Output: ["Foxtrot", "2022"]
 //
 // const cohort3 = "Foxtrot 2022";
 // console.log(cohort3.split())
-// Output: ["Foxtrot 2021"]
+// Output: ["Foxtrot 2022"]
 //
 // const cohort4 = "F*o*x*t*r*o*t*2*0*2*2";
 // console.log(cohort4.split("*"))
-// Output: ["F", "o", "x", "t", "r", "o", "t","2", "0", "2", "2"]
+// Output: ["F", "o", "x", "t", "r", "o", "t", "2", "0", "2", "2"]
 
 // const cohort5 = "Foxtrot--BLAHBLAHBLAHBLAH--2022";
 // console.log(cohort5.split("--BLAHBLAHBLAHBLAH--"));
