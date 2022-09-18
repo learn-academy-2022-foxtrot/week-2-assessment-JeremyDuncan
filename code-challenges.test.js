@@ -182,6 +182,9 @@ describe("getFirstVowel", () => {
   it("returns null if the word does not contain a vowel", () => {
     expect(getFirstVowel(vowelTester4)).toEqual(null);
   });
+  it("returns the index of the first vowel if it is capital", () => {
+    expect(getFirstVowel(vowelTester5)).toEqual(1);
+  });
 });
 
 const vowelTester1 = "learn";
@@ -194,7 +197,9 @@ const vowelTester3 = "challenges";
 // -----------------== Additional Edge Cases ==---------------------------------
 const vowelTester4 = "myth";
 // Expected output: null
+const vowelTester5 = "LEARN";
 
+// Expected output: null
 // =============================================================================
 // b) Create the function that makes the test pass.
 // =============================================================================
@@ -204,8 +209,9 @@ const vowelTester4 = "myth";
 // Output: Integer or Null
 //
 // I decided to use a for-loop and a conditional if-statement to accomplish
-// this task. I then decided to go a little further and have the function return
-// null if it finishes iterating through a word that doesn't have a vowel.
+// this task. I then decided to go a little further and have the function work
+// with capital vowels as well as return null if it finishes iterating through
+// a word that doesn't have a vowel.
 //
 // iterate over each string character
 // if a character is a vowel then..
@@ -214,13 +220,14 @@ const vowelTester4 = "myth";
 // return null
 //------------------------------------------------------------------------------
 const getFirstVowel = (string) => {
-  for (i = 0; i < string.length; i++) {
+  let str = string.toLowerCase();
+  for (i = 0; i < str.length; i++) {
     if (
-      string[i] === "a" ||
-      string[i] === "e" ||
-      string[i] === "i" ||
-      string[i] === "o" ||
-      string[i] === "u"
+      str[i] === "a" ||
+      str[i] === "e" ||
+      str[i] === "i" ||
+      str[i] === "o" ||
+      str[i] === "u"
     ) {
       return i;
     }
