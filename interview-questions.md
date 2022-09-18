@@ -35,11 +35,7 @@ and coresponds with the associated parameters declared functions or classes.
 
  <!-- -----------------visual diagram -------------------------------------- -->
  
-
-# <p align="center"> Diagram of arguments being passed to parameters in function</p>
-
-
-
+## <p align="center"> Diagram of arguments being passed to parameters in function</p>
 ```mermaid
 graph LR
   param1 --> dF["const coolFunction = (param1, param2) => 
@@ -89,6 +85,25 @@ and takes in the arguments:
 * filter() effects only the elements that pass a given conditional test
   * You would use filter() to invite everyone but Dwight..
 
+<!-- -----------------visual diagram -------------------------------------- -->
+## <p align="center"> Diagram of map() and filter()</p>
+```mermaid
+graph TB
+  arr("Array<br>[ 5, 10 , 15 , 20 ]") --> map("map()")
+  map --> fn["function<br> (value) => value * 10"]
+  map --> rtn[Return]
+  fn --> map
+  fn --> map
+  fn --> map
+  fn --> map
+  map --> fn
+  map --> fn
+  map --> fn
+  map --> fn
+  rtn --> arr2("New Array<br>[ 50, 100 , 150 , 200 ]")
+  mp>"map() loops through every element in an array<br> and applies the function
+  added as an argument"]
+```
 
 ### Researched answer:
 According to MDN Webdocs: 
@@ -116,6 +131,25 @@ times depending on if a condition is met.
 while(dishesDirty) {
   stackDishwasher()
 }
+
+```
+<!-- -----------------visual diagram -------------------------------------- -->
+## <p align="center"> for-loop / iteration process</p>
+```mermaid
+graph LR
+
+  false("While false") --> rtn[Next line of Code]
+  loop[for-loop] --> true
+  loop[for-loop] --> false
+  true("While true") --> iterate
+  iterate --> code["do this line of code"]
+  code --> loop
+  code --> loop
+  code --> loop
+  iterate --> code
+  iterate --> code
+  mp>"for-loop logic will iterate while true,<br> or run the next line of code when 
+  false"]
 
 ```
 
