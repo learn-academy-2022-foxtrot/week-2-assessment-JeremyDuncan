@@ -85,7 +85,7 @@ and takes in the arguments:
   * You would use filter() to invite everyone but Dwight..
 
 <!-- -----------------visual diagram -------------------------------------- -->
-## <p align="center"> Diagram of map() and filter()</p>
+## <p align="center"> Diagram of map()</p>
 ```mermaid
 graph TB
   arr("Array<br>[ 5, 10 , 15 , 20 ]") --> map("map()")
@@ -98,10 +98,32 @@ graph TB
   map --> fn
   map --> fn
   map --> fn
-  map --> fn
   rtn --> arr2("New Array<br>[ 50, 100 , 150 , 200 ]")
-  mp>"map() loops through every element in an array<br> and applies the function
-  added as an argument"]
+  mp>"map() loops through every element in an array<br> 
+    and applies the function added as an argument <br>to each element
+    and returns those values in a<br> new array"]
+```
+## <p align="center"> Diagram of filter()</p>
+```mermaid
+  graph TB
+  arr3("Array<br>[ 'Angela', 'Jim' , 'Stan' , 'Dwight', 'Michael' ]") --> 
+    filter("filter()")
+  filter --> fn["function<br> (person) => person !== 'Dwight'"]
+  fn --> filter
+  fn --> filter
+  fn --> filter
+  fn --> filter
+  fn --> filter
+  filter --> fn
+  filter --> fn
+  filter --> fn
+  filter --> fn
+  filter --> true
+  true["Condition === true"] --> rtn[Return]
+  rtn --> arr4("New Array<br>[ 'Angela', 'Jim' , 'Stan' , 'Michael'  ]")
+  fil>"filter() loops through every element in an array and returns the<br> 
+  elements that create a logical 'true' on the conditions<br> provided in 
+  filter(). These values are returned in a new array."]
 ```
 
 ### Researched answer:
