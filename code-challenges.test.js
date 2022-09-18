@@ -58,7 +58,7 @@ describe("divByThree", () => {
   });
 });
 
-// ----------------------== Test Objects ==-------------------------------------
+// -----------------=== Provided Test Cases ===---------------------------------
 const object1 = { number: 15 };
 // Expected output: "15 is divisible by three"
 const object2 = { number: 0 };
@@ -103,32 +103,27 @@ const divByThree = (obj) => {
 
 //---------------------== Function Explanation ==-------------------------------
 // I decided to stick with one it-statement on this test since both test cases
-// would encompase the same description of the test.
+// would encompase the same description of the test. I decided to create some
+// variables to hold the values of my expected test results so I could plug them
+// into my tests for readability.
 //
 // ------ Initial Test: ReferenceError: capitalize is not defined --------------
 //------------------------------------------------------------------------------
+
 describe("capitalize", () => {
   it("returns an array with all the words capitalized", () => {
-    expect(capitalize(randomNouns1)).toEqual([
-      "Streetlamp",
-      "Potato",
-      "Teeth",
-      "Conclusion",
-      "Nephew",
-    ]);
-    expect(capitalize(randomNouns2)).toEqual([
-      "Temperature",
-      "Database",
-      "Chopsticks",
-      "Mango",
-    ]);
+    expect(capitalize(randomNouns1)).toEqual(expected1);
+    expect(capitalize(randomNouns2)).toEqual(expected2);
   });
 });
 
+// ----------------=== Expected Test Results ===--------------------------------
+const expected1 = ["Streetlamp", "Potato", "Teeth", "Conclusion", "Nephew"];
+const expected2 = ["Temperature", "Database", "Chopsticks", "Mango"];
+
+// -----------------=== Provided Test Cases ===---------------------------------
 const randomNouns1 = ["streetlamp", "potato", "teeth", "conclusion", "nephew"];
-// Expected output: ["Streetlamp", "Potato", "Teeth", "Conclusion", "Nephew"]
 const randomNouns2 = ["temperature", "database", "chopsticks", "mango"];
-// Expected output: ["Temperature", "Database", "Chopsticks", "Mango"]
 
 // =============================================================================
 // b) Create the function that makes the test pass.
@@ -177,7 +172,6 @@ describe("getFirstVowel", () => {
     expect(getFirstVowel(vowelTester1)).toEqual(1);
     expect(getFirstVowel(vowelTester2)).toEqual(0);
     expect(getFirstVowel(vowelTester3)).toEqual(2);
-    expect(getFirstVowel(vowelTester4)).toEqual(null);
   });
   it("returns null if the word does not contain a vowel", () => {
     expect(getFirstVowel(vowelTester4)).toEqual(null);
@@ -187,6 +181,7 @@ describe("getFirstVowel", () => {
   });
 });
 
+// -----------------=== Provided Test Cases ===---------------------------------
 const vowelTester1 = "learn";
 // Expected output: 1
 const vowelTester2 = "academy";
