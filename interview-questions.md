@@ -34,7 +34,6 @@ and coresponds with the associated parameters declared functions or classes.
 ```
 
  <!-- -----------------visual diagram -------------------------------------- -->
- 
 ## <p align="center"> Diagram of arguments being passed to parameters in function</p>
 ```mermaid
 graph LR
@@ -129,7 +128,7 @@ times depending on if a condition is met.
 // continue to stack the dishwasher
 
 while(dishesDirty) {
-  stackDishwasher()
+  stackDishWasher()
 }
 
 ```
