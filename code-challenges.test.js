@@ -216,7 +216,7 @@ const vowelTester5 = "LEARN";
 //------------------------------------------------------------------------------
 const getFirstVowel = (string) => {
   let str = string.toLowerCase();
-  for (i = 0; i < str.length; i++) {
+  for (let i = 0; i < str.length; i++) {
     if (
       str[i] === "a" ||
       str[i] === "e" ||
